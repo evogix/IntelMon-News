@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ORACLE-INTLEL-MON v1.0
+IntelMon-News v1.0
 Full-internet cybersecurity threat monitor -> Telegram alerts.
 Sources: RSS news feeds | CISA KEV | NVD critical CVEs | Ransomware.live victims | Exploit-DB
 
@@ -421,7 +421,7 @@ if __name__ == "__main__":
     a = ap.parse_args()
 
     if a.test:
-        ok = tg_send(f"\u2705 \U0001F916 <b>ORACLE-INTLEL-MON online!</b>\nMonitoring: "
+        ok = tg_send(f"\u2705 \U0001F916 <b>IntelMon-News online!</b>\nMonitoring: "
                      f"RSS \u00B7 KEV \u00B7 NVD \u00B7 Ransomware.live \u00B7 Exploit-DB\n"
                      f"min_priority={CFG['min_priority']} interval={CFG.get('interval_sec',600)}s")
         print("TEST OK" if ok else "TEST FAILED"); sys.exit(0)

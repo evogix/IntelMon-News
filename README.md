@@ -1,4 +1,4 @@
-# ORACLE-INTEL-MON — Threat Intelligence Monitor → Telegram
+# IntelMon-News — Threat Intelligence Monitor → Telegram
 
 Real-time cybersecurity intelligence aggregator. Every new article, CVE, or victim is delivered to Telegram with source link and timestamp.
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# ORACLE-INTEL-MON setup — Cross-platform (Linux / macOS / Windows WSL / Termux)
+# IntelMon-News setup — Cross-platform (Linux / macOS / Windows WSL / Termux)
 set -e
 cd "$(dirname "$0")"
 
