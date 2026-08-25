@@ -36,7 +36,11 @@ logging.basicConfig(
 )
 log = logging.getLogger("intelmon")
 
-UA = {"User-Agent": "Mozilla/5.0 (IntelMon; security-research)"}
+UA = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "application/rss+xml, application/xml, text/xml, */*",
+    "Accept-Language": "en-US,en;q=0.9",
+}
 TIMEOUT = 25
 
 # ─────────────────────────── Timezone: IST ────────────────────────────────
@@ -196,15 +200,35 @@ def fetch_rss(con):
     if not feedparser:
         return
     def _fetch_one(src):
-        try:
-            r = requests.get(src["url"], headers=UA, timeout=20)
-            if r.status_code == 200 and r.content:
-                return (src, r.content)
-            log.warning(f"RSS {src['name']}: HTTP {r.status_code}")
-            return (src, None)
-        except Exception as ex:
-            log.error(f"RSS {src['name']}: {ex}")
-            return (src, None)
+        headers = UA
+        for attempt in range(2):
+            try:
+                r = requests.get(src["url"], headers=headers, timeout=20)
+                if r.status_code == 200 and r.content:
+                    return (src, r.content)
+                # Transient errors: retry once, then silently skip to avoid log spam
+                if r.status_code in (403, 429, 503, 530):
+                    if attempt == 0:
+                        time.sleep(1.5)
+                        continue
+                    # Rate-limited/WAF — don't spam logs every 3 min
+                    log.debug(f"RSS {src['name']}: HTTP {r.status_code} (rate-limited, skip)")
+                    return (src, None)
+                if r.status_code == 404:
+                    log.warning(f"RSS {src['name']}: HTTP 404 (feed URL may have moved)")
+                    return (src, None)
+                log.warning(f"RSS {src['name']}: HTTP {r.status_code}")
+                return (src, None)
+            except requests.exceptions.ConnectionError:
+                if attempt == 0:
+                    time.sleep(2)
+                    continue
+                log.debug(f"RSS {src['name']}: Connection refused (network blip)")
+                return (src, None)
+            except Exception as ex:
+                log.error(f"RSS {src['name']}: {ex}")
+                return (src, None)
+        return (src, None)
     srcs = CFG["sources"]["rss"]
     results = {}
     with ThreadPoolExecutor(max_workers=20) as ex:
