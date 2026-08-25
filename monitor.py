@@ -457,10 +457,11 @@ def cycle():
     # Darkweb — separate module, only if enabled (config darkweb.enabled or sources.enable_darkweb)
     darkweb_enabled = False
     try:
-        darkweb_enabled = CFG.get("darkweb", {}).get("enabled", False) or CFG.get("sources", {}).get("enable_darkweb", False)
-        # Also support string "enable"/"disable"
+        darkweb_cfg = CFG.get("darkweb", {})
+        # New: darkweb.services (preferred), fallback to darkweb.enabled, then sources.enable_darkweb
+        darkweb_enabled = darkweb_cfg.get("services", darkweb_cfg.get("enabled", False)) or CFG.get("sources", {}).get("enable_darkweb", False)
         if isinstance(darkweb_enabled, str):
-            darkweb_enabled = darkweb_enabled.lower() == "enable"
+            darkweb_enabled = darkweb_enabled.lower() in ("enable", "enabled", "true", "on", "1")
     except Exception:
         darkweb_enabled = False
     if darkweb_enabled and HAS_DARKWEB:

@@ -78,7 +78,7 @@
     "enable_darkweb": false
   },
   "darkweb": {
-    "enabled": false,
+    "services": false,
     "tor_proxy": "socks5h://127.0.0.1:9050",
     "use_tor": false
   }
