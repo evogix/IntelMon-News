@@ -1,92 +1,118 @@
-# 🛰️ ORACLE-INTEL-MON — Full Internet Threat Monitor → Telegram
+# ORACLE-INTEL-MON — Threat Intelligence Monitor → Telegram
 
-Real-time cybersecurity intel aggregator. Jo bhi naya hoga — Telegram pe alert milega source ke saath.
+Real-time cybersecurity intelligence aggregator. Every new article, CVE, or victim is delivered to Telegram with source link and timestamp.
 
-## Kya-Kya Monitor Hota Hai
+## Monitored Sources
 
 | Source | Data | Priority |
 |---|---|---|
-| **Ransomware.live API** | Har naya ransomware victim (LockBit, Akira, Cl0p...) | 🔴 CRITICAL |
-| **CISA KEV** | Actively-exploited CVEs (+ransomware campaign flag) | 🔴 CRITICAL |
-| **NVD API** | Naye CVEs with CVSS ≥ 9.0 | 🔴 CRITICAL |
-| **RSS Feeds** (8 sources) | Hacker News, BleepingComputer, Krebs, DarkReading, SecurityWeek, PortSwigger, r/netsec, GBHackers | Keyword-scored |
-| **Exploit-DB** | Naye public exploits (last 48h) | 🟠 HIGH |
+| **RSS Feeds (101)** | The Hacker News, BleepingComputer, KrebsOnSecurity, DarkReading, SecurityWeek, PortSwigger, The Record, CyberScoop, Ars Technica, Infosecurity Magazine, HelpNetSecurity, SANS ISC, CISA Advisories, NCSC UK, Schneier, SentinelOne, CrowdStrike, Rapid7, plus 80+ more | Scored by keywords |
+| **CISA KEV** | Actively exploited CVEs (with ransomware campaign flag) | 🔴 CRITICAL |
+| **NVD API** | New CVEs with CVSS ≥ 9.0 | 🔴 CRITICAL |
+| **RansomWatch** | New ransomware victims (GitHub mirror) | 🔴 CRITICAL |
+| **Exploit-DB** | New public exploits (last 48h) | 🟠 HIGH |
 
-**Keyword engine:** title/summary scan → `0day/RCE/ransomware/APT/supply chain` = CRITICAL, `exploit/POC/bypass/breach` = HIGH, threat-group names (LockBit, Lazarus, Scattered Spider...) = CRITICAL.
+**Scoring engine:** Title/summary scan — `0day / RCE / actively exploited / ransomware / supply chain / backdoor` → CRITICAL, `exploit / POC / bypass / leak / hacked / malware` → HIGH, threat-group names (LockBit, Akira, Lazarus, etc.) → CRITICAL.
 
-## Setup (5 min)
+**Dedup:** SQLite-based with normalized title + 12-hour similarity check (Jaccard >0.6). No duplicate alerts. State persists across restarts.
+
+**Filters:** Only articles from the last 3 days (`max_age_days: 3`). Older items are skipped. Short keywords (`rce`, `poc`) use word boundaries to avoid false positives (e.g., `percent`).
+
+## Setup (5 minutes)
 
 ```bash
 cd intel-monitor
-bash setup.sh                    # deps install
-# 1. @BotFather → /newbot → token copy
-# 2. config.json → telegram.bot_token
-# 3. Bot ko DM bhejo, phir: curl api.telegram.org/bot<TOKEN>/getUpdates → chat.id
-# 4. config.json → telegram.chat_id
+bash setup.sh                    # installs: requests feedparser
 
-python3 monitor.py --test        # ✅ connectivity check
+# 1. Create bot: @BotFather on Telegram → /newbot → copy token
+# 2. Edit config.json → telegram.bot_token
+# 3. Send a message to your bot, then:
+curl https://api.telegram.org/bot<TOKEN>/getUpdates
+# → copy chat.id from response
+# 4. Edit config.json → telegram.chat_id
+
+python3 monitor.py --test        # connectivity check
 python3 monitor.py --once        # single cycle test
-python3 monitor.py --loop 600    # continuous — har 10 min poll
+python3 monitor.py --loop 180    # continuous (every 3 min)
 ```
+
+Copy `config.json.example` to `config.json` and fill your credentials. Never commit `config.json` with real tokens.
 
 ## Alert Format
 
 ```
-🔴 CRITICAL 🚨 RANSOMWARE-VICTIM
-Acme Logistics Ltd
-• 🤖 Group: akira
-• 🌍 Country: IN
-• 📅 Discovered: 2026-08-24
-• 🔗 Source: https://ransomware.live/...
-• ⏰ 2026-08-24 14:32 UTC
+🔴 CRITICAL 🚨 NEWS
+
+PeopleSoft Pre-Auth RCE: PSIGW SSRF Chain → RCE
+
+• 📰 The Record
+
+🔗 Source
+
+⏰ 24-Aug-2026 05:35:56 PM IST
 ```
 
 ```
-🟠 HIGH 🚨 NEWS
-New bypass technique disclosed for popular VPN appliance
-• 📰 BleepingComputer
-• 🎯 match: kw:bypass
-• 🔗 Source: https://...
+🔴 CRITICAL 🚨 NEW-CVE
+
+CVE-2026-78167 — CVSS 10.0
+
+• Remote code execution in XYZ
+• Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
+• Severity: CRITICAL
+
+🔗 Source
+
+⏰ 24-Aug-2026 05:31:29 PM IST
 ```
 
-## Tuning (`config.json`)
+Timestamps are in IST (Asia/Kolkata, 12-hour with AM/PM).
 
-- `min_priority`: `"high"` (default — INFO chhupata hai) ya `"all"` ya `"critical"`
-- `cve_min_score`: `9.0` → kam karke `7.0` = zyada CVE alerts
-- `keywords`: apne hisaab se add/remove karo
-- `interval_sec` / `--loop 300`: har 5 min poll
+## Configuration (`config.json`)
 
-## Background Run (Termux)
+- `min_priority`: `"high"` (default, hides INFO), `"all"` or `"critical"`
+- `cve_min_score`: `9.0` → lower to `7.0` for more CVEs
+- `interval_sec`: `180` (3 min polling)
+- `max_age_days`: `3` (only last 3 days)
+- `heartbeat_cycles`: `0` (disabled; set to N to send heartbeat every N cycles)
+- `keywords`: customize critical/high/group lists
 
+## Running
+
+**Termux (background):**
 ```bash
 termux-wake-lock
-nohup python3 monitor.py --loop 600 > logs/nohup.log 2>&1 &
+nohup python3 monitor.py --loop 180 > logs/nohup.log 2>&1 &
 ```
 
-## VPS Run (24/7 recommended)
+**With Boot/Widget (no need to open Termux):**
+- Boot: `~/.termux/boot/intelmon-boot.sh` auto-starts on device boot
+- Widget: add `~/.shortcuts/IntelMon-Status.sh` via home screen → Widgets → Termux
 
+**VPS (24/7):**
 ```bash
-*/10 * * * * cd /opt/intel-monitor && python3 monitor.py --once >> logs/cron.log 2>&1
+# cron every 3 min
+*/3 * * * * cd /opt/intel-monitor && python3 monitor.py --once >> logs/cron.log 2>&1
 ```
-Ya systemd: `Restart=always` ke saath `--loop 600`.
+Or systemd with `Restart=always` and `--loop 180`.
 
-## Advanced Add-ons (next level)
-
-1. **Hacker-group Telegram channels** — Telethon userbot se channels scrape karo (many groups announce via TG)
-2. **Twitter/X** — Nitter RSS instances se @vxunderground etc.
-3. **Zone-H defacements** — mirror archive polling for "hacked by" claims
-4. **GitHub advisories** — GHSA GraphQL API
-5. **Dark-web leak sites** — ransomware.live already covers; direct .onion needs Tor proxy + custom fetchers
-
-## Files
+## Project Structure
 
 ```
 intel-monitor/
-├── monitor.py      # main engine
-├── config.json     # sources + keywords + creds
-├── setup.sh        # installer
-├── data/intel.db   # dedup store (SQLite)
-└── logs/           # monitor.log, cron.log
+├── monitor.py           # main engine
+├── config.json          # sources + keywords + creds (gitignored)
+├── config.json.example  # template
+├── setup.sh             # installer
+├── data/intel.db        # dedup store (SQLite)
+└── logs/                # monitor.log, nohup.log
 ```
 
-Dedup SQLite-based hai — same news dobara alert NAHI hogi. State persist hoti hai restarts ke across.
+## Requirements
+
+- Python 3.10+
+- `pip install requests feedparser`
+
+## License
+
+MIT
