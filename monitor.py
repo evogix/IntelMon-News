@@ -24,6 +24,13 @@ except ImportError:
     feedparser = None
     print("[!] pip install feedparser  (RSS disabled until installed)")
 
+# Darkweb module — separate file, only used if enabled in config
+try:
+    import darkweb
+    HAS_DARKWEB = True
+except ImportError:
+    HAS_DARKWEB = False
+
 BASE = os.path.dirname(os.path.abspath(__file__))
 CFG = json.load(open(os.path.join(BASE, "config.json")))
 # Professional split: feeds in feeds.json, sensitive settings in config.json
@@ -447,6 +454,22 @@ def cycle():
     if CFG["sources"].get("enable_kev"):        fetch_kev(con)
     if CFG["sources"].get("enable_nvd"):        fetch_nvd(con)
     if CFG["sources"].get("enable_exploitdb"):  fetch_exploitdb(con)
+    # Darkweb — separate module, only if enabled (config darkweb.enabled or sources.enable_darkweb)
+    darkweb_enabled = False
+    try:
+        darkweb_enabled = CFG.get("darkweb", {}).get("enabled", False) or CFG.get("sources", {}).get("enable_darkweb", False)
+        # Also support string "enable"/"disable"
+        if isinstance(darkweb_enabled, str):
+            darkweb_enabled = darkweb_enabled.lower() == "enable"
+    except Exception:
+        darkweb_enabled = False
+    if darkweb_enabled and HAS_DARKWEB:
+        try:
+            darkweb.fetch_darkweb(con, alert)
+        except Exception as e:
+            log.error(f"Darkweb: {e}")
+    elif darkweb_enabled and not HAS_DARKWEB:
+        log.warning("Darkweb enabled but darkweb.py not found")
     fetch_rss(con)
     set_meta(con, "bootstrapped", 1)
     n = con.execute("SELECT COUNT(*) FROM seen").fetchone()[0]
