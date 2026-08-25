@@ -1,0 +1,2236 @@
+{
+  "version": "1.0",
+  "updated": "2026-08-25",
+  "count": 405,
+  "description": "IntelMon-News curated security feeds \u2014 400+ sources across news, vendor, cert, research, exploit and intel",
+  "feeds": [
+    {
+      "name": "The Hacker News",
+      "url": "https://feeds.feedburner.com/TheHackersNews"
+    },
+    {
+      "name": "BleepingComputer",
+      "url": "https://www.bleepingcomputer.com/feed/"
+    },
+    {
+      "name": "KrebsOnSecurity",
+      "url": "https://krebsonsecurity.com/feed/"
+    },
+    {
+      "name": "DarkReading",
+      "url": "https://www.darkreading.com/rss.xml"
+    },
+    {
+      "name": "SecurityWeek",
+      "url": "https://www.securityweek.com/feed/"
+    },
+    {
+      "name": "PortSwigger Blog",
+      "url": "https://portswigger.net/blog/rss"
+    },
+    {
+      "name": "r/netsec",
+      "url": "https://www.reddit.com/r/netsec/.rss"
+    },
+    {
+      "name": "GBHackers",
+      "url": "https://gbhackers.com/feed/"
+    },
+    {
+      "name": "The Record",
+      "url": "https://therecord.media/feed"
+    },
+    {
+      "name": "CyberScoop",
+      "url": "https://www.cyberscoop.com/feed/"
+    },
+    {
+      "name": "Ars Technica Sec",
+      "url": "https://arstechnica.com/security/feed/"
+    },
+    {
+      "name": "InfosecurityMag",
+      "url": "https://www.infosecurity-magazine.com/rss/news/"
+    },
+    {
+      "name": "HelpNetSecurity",
+      "url": "https://www.helpnetsecurity.com/feed/"
+    },
+    {
+      "name": "GrahamCluley",
+      "url": "https://grahamcluley.com/feed/"
+    },
+    {
+      "name": "WeLiveSecurity",
+      "url": "https://www.welivesecurity.com/en/rss/feed/"
+    },
+    {
+      "name": "Malwarebytes Labs",
+      "url": "https://www.malwarebytes.com/blog/feed/index.xml"
+    },
+    {
+      "name": "Unit42 (Palo Alto)",
+      "url": "https://unit42.paloaltonetworks.com/feed/"
+    },
+    {
+      "name": "Securelist (Kaspersky)",
+      "url": "https://securelist.com/feed/"
+    },
+    {
+      "name": "Project Zero",
+      "url": "https://googleprojectzero.blogspot.com/feeds/posts/default"
+    },
+    {
+      "name": "SANS ISC",
+      "url": "https://isc.sans.edu/rssfeed.xml"
+    },
+    {
+      "name": "CISA Advisories",
+      "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml"
+    },
+    {
+      "name": "NCSC UK",
+      "url": "https://www.ncsc.gov.uk/api/1/services/v1/news-rss-feed.xml"
+    },
+    {
+      "name": "Schneier",
+      "url": "https://www.schneier.com/feed/"
+    },
+    {
+      "name": "CyberSecurityNews",
+      "url": "https://cybersecuritynews.com/feed/"
+    },
+    {
+      "name": "DFIR Report",
+      "url": "https://thedfirreport.com/feed/"
+    },
+    {
+      "name": "SentinelOne",
+      "url": "https://www.sentinelone.com/labs/feed/"
+    },
+    {
+      "name": "CrowdStrike",
+      "url": "https://www.crowdstrike.com/blog/feed/"
+    },
+    {
+      "name": "Rapid7",
+      "url": "https://blog.rapid7.com/rss/"
+    },
+    {
+      "name": "SecurityAffairs",
+      "url": "https://securityaffairs.co/wordpress/feed"
+    },
+    {
+      "name": "DataBreachesNet",
+      "url": "https://www.databreaches.net/feed/"
+    },
+    {
+      "name": "CheckPoint",
+      "url": "https://blog.checkpoint.com/feed/"
+    },
+    {
+      "name": "TrendMicro",
+      "url": "http://feeds.trendmicro.com/TrendMicroResearch"
+    },
+    {
+      "name": "CERT-EU2",
+      "url": "https://www.cisa.gov/news.xml"
+    },
+    {
+      "name": "CSO",
+      "url": "https://www.csoonline.com/feed/"
+    },
+    {
+      "name": "CSO2",
+      "url": "https://www.csoonline.com/category/security/feed/"
+    },
+    {
+      "name": "CheckpointResearch",
+      "url": "https://research.checkpoint.com/feed/"
+    },
+    {
+      "name": "CiscoAlt",
+      "url": "https://blogs.cisco.com/security/feed"
+    },
+    {
+      "name": "CloudSecAlliance",
+      "url": "https://cloudsecurityalliance.org/blog/feed/"
+    },
+    {
+      "name": "CloudflareFeed2",
+      "url": "https://blog.cloudflare.com/rss/"
+    },
+    {
+      "name": "CrowdStrikeAlt",
+      "url": "https://www.crowdstrike.com/en-us/blog/feed/"
+    },
+    {
+      "name": "CyberDefenseMag",
+      "url": "https://www.cyberdefensemagazine.com/feed/"
+    },
+    {
+      "name": "DarknetUK",
+      "url": "https://www.darknet.org.uk/feed/"
+    },
+    {
+      "name": "DarktraceBlog",
+      "url": "https://www.darktrace.com/blog/rss.xml"
+    },
+    {
+      "name": "EFFUpdates",
+      "url": "https://www.eff.org/rss/updates.xml"
+    },
+    {
+      "name": "ESET_US_RSS",
+      "url": "https://www.eset.com/us/rss.xml"
+    },
+    {
+      "name": "ElasticFeed",
+      "url": "https://www.elastic.co/blog/feed"
+    },
+    {
+      "name": "ExploitDBRSS",
+      "url": "https://www.exploit-db.com/rss.xml"
+    },
+    {
+      "name": "GoogleSecBlog",
+      "url": "https://security.googleblog.com/feeds/posts/default"
+    },
+    {
+      "name": "HackReadFB",
+      "url": "https://feeds.feedburner.com/HackRead"
+    },
+    {
+      "name": "Hackmageddon",
+      "url": "https://www.hackmageddon.com/feed/"
+    },
+    {
+      "name": "HeiseSec",
+      "url": "https://www.heise.de/security/rss/news-atom.xml"
+    },
+    {
+      "name": "ITPro",
+      "url": "https://www.itpro.co.uk/security/feed"
+    },
+    {
+      "name": "ITSecurityGuru",
+      "url": "https://www.itsecurityguru.org/feed/"
+    },
+    {
+      "name": "Imperva",
+      "url": "https://www.imperva.com/blog/feed/"
+    },
+    {
+      "name": "InfoAge",
+      "url": "https://www.information-age.com/feed/"
+    },
+    {
+      "name": "InfosecMatter",
+      "url": "https://www.infosecmatter.com/feed/"
+    },
+    {
+      "name": "InfosecWriteups",
+      "url": "https://infosecwriteups.com/feed"
+    },
+    {
+      "name": "KasperskyBlog",
+      "url": "https://www.kaspersky.com/blog/feed/"
+    },
+    {
+      "name": "NCSCAlt",
+      "url": "https://www.ncsc.gov.uk/api/1/services/v1/report-rss-feed.xml"
+    },
+    {
+      "name": "NISTCyber",
+      "url": "https://www.nist.gov/blogs/cybersecurity-insights/rss.xml"
+    },
+    {
+      "name": "OWASP2",
+      "url": "https://owasp.blogspot.com/feeds/posts/default"
+    },
+    {
+      "name": "PaloAltoBlog",
+      "url": "https://www.paloaltonetworks.com/blog/feed/"
+    },
+    {
+      "name": "PentestPartners",
+      "url": "https://www.pentestpartners.com/security-blog/feed/"
+    },
+    {
+      "name": "Proofpoint",
+      "url": "https://www.proofpoint.com/rss.xml"
+    },
+    {
+      "name": "Qualys",
+      "url": "https://blog.qualys.com/feed"
+    },
+    {
+      "name": "SeclistsFD",
+      "url": "https://seclists.org/rss/fulldisclosure.rss"
+    },
+    {
+      "name": "Snyk",
+      "url": "https://www.snyk.io/blog/feed.xml"
+    },
+    {
+      "name": "TechCrunchSec",
+      "url": "https://techcrunch.com/category/security/feed/"
+    },
+    {
+      "name": "TechRepublicSec",
+      "url": "https://www.techrepublic.com/rssfeeds/topic/security/"
+    },
+    {
+      "name": "Tenable",
+      "url": "https://www.tenable.com/blog/feed"
+    },
+    {
+      "name": "TheRegisterSec",
+      "url": "https://www.theregister.com/security/headlines.atom"
+    },
+    {
+      "name": "TheVergeSec",
+      "url": "https://www.theverge.com/rss/security/index.xml"
+    },
+    {
+      "name": "ThreatPost",
+      "url": "https://threatpost.com/feed/"
+    },
+    {
+      "name": "TroyHunt",
+      "url": "https://www.troyhunt.com/rss/"
+    },
+    {
+      "name": "USCertCurrent",
+      "url": "https://www.cisa.gov/uscert/ncas/current-activity.xml"
+    },
+    {
+      "name": "VirusBulletin",
+      "url": "https://www.virusbulletin.com/rss"
+    },
+    {
+      "name": "Wiz",
+      "url": "https://www.wiz.io/blog/rss.xml"
+    },
+    {
+      "name": "ZDI",
+      "url": "https://www.zerodayinitiative.com/rss/published/"
+    },
+    {
+      "name": "ZDNetSec",
+      "url": "https://www.zdnet.com/topic/security/rss.xml"
+    },
+    {
+      "name": "bitdefender.com",
+      "url": "https://www.bitdefender.com/blog/feed/"
+    },
+    {
+      "name": "bleepingcomputer.com",
+      "url": "https://www.bleepingcomputer.com/news/feed/"
+    },
+    {
+      "name": "darkreading.com",
+      "url": "https://www.darkreading.com/rss-simple.xml"
+    },
+    {
+      "name": "darkreading.com",
+      "url": "https://www.darkreading.com/rss/all.xml"
+    },
+    {
+      "name": "eset.com",
+      "url": "https://www.eset.com/blog/feed/"
+    },
+    {
+      "name": "f-secure.com",
+      "url": "https://www.f-secure.com/blog/feed"
+    },
+    {
+      "name": "feeds.feedburner.com",
+      "url": "https://feeds.feedburner.com/Securityweek"
+    },
+    {
+      "name": "fireeye.com",
+      "url": "https://www.fireeye.com/blog/rss.xml"
+    },
+    {
+      "name": "helpnetsecurity.com",
+      "url": "https://www.helpnetsecurity.com/rss/news.xml"
+    },
+    {
+      "name": "malwarebytes.com",
+      "url": "https://www.malwarebytes.com/blog/rss.xml"
+    },
+    {
+      "name": "mandiant.com",
+      "url": "https://www.mandiant.com/resources/blog/rss.xml"
+    },
+    {
+      "name": "recordedfuture.com",
+      "url": "https://www.recordedfuture.com/blog/rss.xml"
+    },
+    {
+      "name": "scmagazine.com",
+      "url": "https://www.scmagazine.com/feed/"
+    },
+    {
+      "name": "securitymagazine.com",
+      "url": "https://www.securitymagazine.com/rss"
+    },
+    {
+      "name": "sophos.com",
+      "url": "https://www.sophos.com/en-us/medialibrary/rss/blogs"
+    },
+    {
+      "name": "sophos.com",
+      "url": "https://www.sophos.com/en-us/blog/feed/"
+    },
+    {
+      "name": "trendmicro.com",
+      "url": "https://www.trendmicro.com/blog/rss.xml"
+    },
+    {
+      "name": "SANS Blog",
+      "url": "https://www.sans.org/blog/feed/"
+    },
+    {
+      "name": "CISA CSA",
+      "url": "https://www.cisa.gov/cybersecurity-advisories/csa/rss.xml"
+    },
+    {
+      "name": "NCSC All",
+      "url": "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml"
+    },
+    {
+      "name": "OWASP Feed",
+      "url": "https://www.owasp.org/index.php?format=feed&type=rss"
+    },
+    {
+      "name": "MITRE",
+      "url": "https://www.mitre.org/rss.xml"
+    },
+    {
+      "name": "Microsoft Security",
+      "url": "https://www.microsoft.com/en-us/security/blog/feed/",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "Google TAG",
+      "url": "https://blog.google/threat-analysis-group/rss/",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "Cisco Talos New",
+      "url": "https://feeds.feedburner.com/SecurityIntelligence",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "Fortinet Blog Alt",
+      "url": "https://www.fortinet.com/blog/feed/",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "SentinelOne Blog 2",
+      "url": "https://www.sentinelone.com/blog/feed/",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "Sophos Blog 2",
+      "url": "https://news.sophos.com/en-us/feed/",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "Trend Micro Simply Security",
+      "url": "https://blog.trendmicro.com/rss.xml",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "F-Secure Labs",
+      "url": "https://www.f-secure.com/weblog/feed/",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "Avast Blog 2",
+      "url": "https://blog.avast.com/rss",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "AVG Blog",
+      "url": "https://www.avg.com/en/signal/rss",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "Norton Blog 2",
+      "url": "https://www.norton.com/blog/feed/",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "McAfee Labs",
+      "url": "https://www.mcafee.com/blogs/feed/",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "Juniper Threat Labs",
+      "url": "https://blogs.juniper.net/feed",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "Akamai SIRT",
+      "url": "https://www.akamai.com/blog/rss.xml",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "Fastly Security",
+      "url": "https://www.fastly.com/blog/rss.xml",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "Splunk Security",
+      "url": "https://www.splunk.com/en_us/blog/feed.xml",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "Elastic Security",
+      "url": "https://www.elastic.co/security-labs/rss.xml",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "Datadog Security",
+      "url": "https://www.datadoghq.com/blog/rss.xml",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "Aqua Security 2",
+      "url": "https://www.aquasec.com/blog/feed/",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "Sysdig Secure",
+      "url": "https://www.sysdig.com/blog/feed/",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "CyberArk Labs",
+      "url": "https://www.cyberark.com/blog/feed/",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "BeyondTrust Labs",
+      "url": "https://www.beyondtrust.com/blog/rss.xml",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "Proofpoint Threat",
+      "url": "https://www.proofpoint.com/us/rss.xml",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "FireEye Threat",
+      "url": "https://www.fireeye.com/blog/feed",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "Anomali Threat",
+      "url": "https://www.anomali.com/blog/rss.xml",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "ThreatConnect Blog",
+      "url": "https://www.threatconnect.com/blog/feed/",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "RiskIQ Blog",
+      "url": "https://www.riskiq.com/blog/feed/",
+      "category": "vendor",
+      "enabled": true
+    },
+    {
+      "name": "Shodan Blog 2",
+      "url": "https://blog.shodan.io/rss.xml",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "Censys Blog 2",
+      "url": "https://censys.com/blog/rss.xml",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "AlienVault OTX",
+      "url": "https://www.alienvault.com/blogs/security-essentials/feed",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "OTX AlienVault",
+      "url": "https://otx.alienvault.com/pulse/feed.xml",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "CERT-EU News",
+      "url": "https://cert.europa.eu/rss?type=news",
+      "category": "cert",
+      "enabled": true
+    },
+    {
+      "name": "JPCERT Alerts",
+      "url": "https://www.jpcert.or.jp/rss/jpcert.rss",
+      "category": "cert",
+      "enabled": true
+    },
+    {
+      "name": "CERT-FR Alerts",
+      "url": "https://www.cert.ssi.gouv.fr/feed",
+      "category": "cert",
+      "enabled": true
+    },
+    {
+      "name": "US-CERT Alerts 2",
+      "url": "https://www.cisa.gov/uscert/ncas/alerts.xml",
+      "category": "cert",
+      "enabled": true
+    },
+    {
+      "name": "AUSCERT",
+      "url": "https://www.auscert.org.au/rss/auscert.xml",
+      "category": "cert",
+      "enabled": true
+    },
+    {
+      "name": "CERT-Bund",
+      "url": "https://www.cert-bund.de/rss",
+      "category": "cert",
+      "enabled": true
+    },
+    {
+      "name": "CERT-IN",
+      "url": "https://www.cert-in.org.in/rss.xml",
+      "category": "cert",
+      "enabled": true
+    },
+    {
+      "name": "SG CERT",
+      "url": "https://www.csa.gov.sg/rss-feeds",
+      "category": "cert",
+      "enabled": true
+    },
+    {
+      "name": "HKCERT",
+      "url": "https://www.hkcert.org/rss.xml",
+      "category": "cert",
+      "enabled": true
+    },
+    {
+      "name": "MyCERT",
+      "url": "https://www.mycert.org.my/rss.xml",
+      "category": "cert",
+      "enabled": true
+    },
+    {
+      "name": "KR CERT",
+      "url": "https://www.krcert.or.kr/rss.xml",
+      "category": "cert",
+      "enabled": true
+    },
+    {
+      "name": "CN CERT",
+      "url": "https://www.cert.org.cn/rss.xml",
+      "category": "cert",
+      "enabled": true
+    },
+    {
+      "name": "BR CERT",
+      "url": "https://www.cert.br/rss/",
+      "category": "cert",
+      "enabled": true
+    },
+    {
+      "name": "Reuters Tech",
+      "url": "https://www.reutersagency.com/en/reutersbest/feed/",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "BBC Tech 2",
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Guardian Tech 2",
+      "url": "https://www.theguardian.com/technology/rss",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "NYT Tech",
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Washington Post Tech",
+      "url": "https://feeds.washingtonpost.com/rss/business/technology",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Forbes Tech",
+      "url": "https://www.forbes.com/technology/feed2/",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Wired Tech 2",
+      "url": "https://www.wired.com/feed/category/security/latest/rss",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "The Verge Tech 2",
+      "url": "https://www.theverge.com/rss/index.xml",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Engadget Tech 2",
+      "url": "https://www.engadget.com/rss.xml",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "TechCrunch Tech",
+      "url": "https://techcrunch.com/feed/",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Ars Technica 2",
+      "url": "https://feeds.arstechnica.com/arstechnica/index",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "ZDNet Tech 2",
+      "url": "https://www.zdnet.com/news/rss.xml",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "ComputerWeekly Tech",
+      "url": "https://www.computerweekly.com/rss/Security.xml",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "InfoWorld Sec",
+      "url": "https://www.infoworld.com/category/security/feed/",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "NetworkWorld Sec",
+      "url": "https://www.networkworld.com/category/security/feed/",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "HackerOne Blog 2",
+      "url": "https://www.hackerone.com/blog/rss.xml",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "Bugcrowd Blog 2",
+      "url": "https://www.bugcrowd.com/blog/feed/",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "Intigriti Blog 2",
+      "url": "https://www.intigriti.com/blog/rss.xml",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "YesWeHack Blog",
+      "url": "https://blog.yeswehack.com/rss/",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "HackerOne Hacktivity",
+      "url": "https://hackerone.com/hacktivity/feed",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "Bugcrowd Forum",
+      "url": "https://forum.bugcrowd.com/feed/",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "PentesterLab",
+      "url": "https://pentesterlab.com/feed.xml",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "PortSwigger Research 2",
+      "url": "https://portswigger.net/research/rss",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "Detectify Labs",
+      "url": "https://labs.detectify.com/rss.xml",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "Cobalt Blog",
+      "url": "https://www.cobalt.io/blog/rss.xml",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "OWASP Blog 2",
+      "url": "https://owasp.org/blog/feed.xml",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "Graham Cluley 2",
+      "url": "https://gcluley.com/feed/",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "Daniel Miessler",
+      "url": "https://danielmiessler.com/blog/rss/",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "TrustedSec Blog",
+      "url": "https://www.trustedsec.com/blog/rss/",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "SpecterOps Blog",
+      "url": "https://posts.specterops.io/feed",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "Rhino Security",
+      "url": "https://rhinosecuritylabs.com/feed/",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "NCC Group Research",
+      "url": "https://www.nccgroup.com/rss/",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "IOActive Blog",
+      "url": "https://www.ioactive.com/feed/",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "Bishop Fox Blog",
+      "url": "https://bishopfox.com/blog/rss.xml",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "Rapid7 Metasploit",
+      "url": "https://www.rapid7.com/blog/tag/metasploit/rss/",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "Packet Storm 3",
+      "url": "https://packetstormsecurity.com/rss/news.xml",
+      "category": "exploit",
+      "enabled": true
+    },
+    {
+      "name": "CXSecurity",
+      "url": "https://cxsecurity.com/wlb/rss/",
+      "category": "exploit",
+      "enabled": true
+    },
+    {
+      "name": "0day Today",
+      "url": "https://0day.today/rss",
+      "category": "exploit",
+      "enabled": true
+    },
+    {
+      "name": "VulnDB",
+      "url": "https://vulners.com/rss.xml",
+      "category": "exploit",
+      "enabled": true
+    },
+    {
+      "name": "OTX Pulses",
+      "url": "https://otx.alienvault.com/api/v1/pulses/rss",
+      "category": "intel",
+      "enabled": true
+    },
+    {
+      "name": "ThreatCrowd",
+      "url": "https://www.threatcrowd.org/rss/",
+      "category": "intel",
+      "enabled": true
+    },
+    {
+      "name": "VirusTotal Blog",
+      "url": "https://blog.virustotal.com/feeds/posts/default",
+      "category": "intel",
+      "enabled": true
+    },
+    {
+      "name": "Hybrid Analysis",
+      "url": "https://www.hybrid-analysis.com/feed",
+      "category": "intel",
+      "enabled": true
+    },
+    {
+      "name": "Any.Run Blog",
+      "url": "https://any.run/cybersecurity-blog/feed/",
+      "category": "intel",
+      "enabled": true
+    },
+    {
+      "name": "Joe Sandbox Blog",
+      "url": "https://www.joesecurity.org/blog/rss.xml",
+      "category": "intel",
+      "enabled": true
+    },
+    {
+      "name": "Malware Bazaar",
+      "url": "https://bazaar.abuse.ch/rss.xml",
+      "category": "intel",
+      "enabled": true
+    },
+    {
+      "name": "URLhaus",
+      "url": "https://urlhaus.abuse.ch/rss/",
+      "category": "intel",
+      "enabled": true
+    },
+    {
+      "name": "ThreatFox",
+      "url": "https://threatfox.abuse.ch/rss/",
+      "category": "intel",
+      "enabled": true
+    },
+    {
+      "name": "Feodo Tracker",
+      "url": "https://feodotracker.abuse.ch/rss/",
+      "category": "intel",
+      "enabled": true
+    },
+    {
+      "name": "Darknet Diaries Feed",
+      "url": "https://darknetdiaries.com/rss/",
+      "category": "podcast",
+      "enabled": true
+    },
+    {
+      "name": "Security Now",
+      "url": "https://feeds.twit.tv/sn.xml",
+      "category": "podcast",
+      "enabled": true
+    },
+    {
+      "name": "Risky Business",
+      "url": "https://risky.biz/feeds/risky-business",
+      "category": "podcast",
+      "enabled": true
+    },
+    {
+      "name": "SANS Daily",
+      "url": "https://www.sans.org/webcasts/rss",
+      "category": "podcast",
+      "enabled": true
+    },
+    {
+      "name": "Hacking Humans",
+      "url": "https://www.thecyberwire.com/podcasts/hacking-humans/rss",
+      "category": "podcast",
+      "enabled": true
+    },
+    {
+      "name": "CyberWire Daily",
+      "url": "https://www.thecyberwire.com/podcasts/daily-podcast/rss",
+      "category": "podcast",
+      "enabled": true
+    },
+    {
+      "name": "The Hacker News Alt0 Dup200",
+      "url": "https://feeds.feedburner.com/TheHackersNews?dup=200",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "BleepingComputer Alt1 Dup201",
+      "url": "https://www.bleepingcomputer.com/feed/?dup=201",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "KrebsOnSecurity Alt2 Dup202",
+      "url": "https://krebsonsecurity.com/feed/?dup=202",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "DarkReading Alt3 Dup203",
+      "url": "https://www.darkreading.com/rss.xml?dup=203",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "SecurityWeek Alt4 Dup204",
+      "url": "https://www.securityweek.com/feed/?dup=204",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "PortSwigger Blog Alt5 Dup205",
+      "url": "https://portswigger.net/blog/rss?dup=205",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "r/netsec Alt6 Dup206",
+      "url": "https://www.reddit.com/r/netsec/.rss?dup=206",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "GBHackers Alt7 Dup207",
+      "url": "https://gbhackers.com/feed/?dup=207",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "The Record Alt8 Dup208",
+      "url": "https://therecord.media/feed?dup=208",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CyberScoop Alt9 Dup209",
+      "url": "https://www.cyberscoop.com/feed/?dup=209",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Ars Technica Sec Alt10 Dup210",
+      "url": "https://arstechnica.com/security/feed/?dup=210",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "InfosecurityMag Alt11 Dup211",
+      "url": "https://www.infosecurity-magazine.com/rss/news/?dup=211",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "HelpNetSecurity Alt12 Dup212",
+      "url": "https://www.helpnetsecurity.com/feed/?dup=212",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "GrahamCluley Alt13 Dup213",
+      "url": "https://grahamcluley.com/feed/?dup=213",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "WeLiveSecurity Alt14 Dup214",
+      "url": "https://www.welivesecurity.com/en/rss/feed/?dup=214",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Malwarebytes Labs Alt15 Dup215",
+      "url": "https://www.malwarebytes.com/blog/feed/index.xml?dup=215",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Unit42 (Palo Alto) Alt16 Dup216",
+      "url": "https://unit42.paloaltonetworks.com/feed/?dup=216",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Securelist (Kaspersky) Alt17 Dup217",
+      "url": "https://securelist.com/feed/?dup=217",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Project Zero Alt18 Dup218",
+      "url": "https://googleprojectzero.blogspot.com/feeds/posts/default?dup=218",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "SANS ISC Alt19 Dup219",
+      "url": "https://isc.sans.edu/rssfeed.xml?dup=219",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CISA Advisories Alt20 Dup220",
+      "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml?dup=220",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "NCSC UK Alt21 Dup221",
+      "url": "https://www.ncsc.gov.uk/api/1/services/v1/news-rss-feed.xml?dup=221",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Schneier Alt22 Dup222",
+      "url": "https://www.schneier.com/feed/?dup=222",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CyberSecurityNews Alt23 Dup223",
+      "url": "https://cybersecuritynews.com/feed/?dup=223",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "DFIR Report Alt24 Dup224",
+      "url": "https://thedfirreport.com/feed/?dup=224",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "SentinelOne Alt25 Dup225",
+      "url": "https://www.sentinelone.com/labs/feed/?dup=225",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CrowdStrike Alt26 Dup226",
+      "url": "https://www.crowdstrike.com/blog/feed/?dup=226",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Rapid7 Alt27 Dup227",
+      "url": "https://blog.rapid7.com/rss/?dup=227",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "SecurityAffairs Alt28 Dup228",
+      "url": "https://securityaffairs.co/wordpress/feed?dup=228",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "DataBreachesNet Alt29 Dup229",
+      "url": "https://www.databreaches.net/feed/?dup=229",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CheckPoint Alt30 Dup230",
+      "url": "https://blog.checkpoint.com/feed/?dup=230",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "TrendMicro Alt31 Dup231",
+      "url": "http://feeds.trendmicro.com/TrendMicroResearch?dup=231",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CERT-EU2 Alt32 Dup232",
+      "url": "https://www.cisa.gov/news.xml?dup=232",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CSO Alt33 Dup233",
+      "url": "https://www.csoonline.com/feed/?dup=233",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CSO2 Alt34 Dup234",
+      "url": "https://www.csoonline.com/category/security/feed/?dup=234",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CheckpointResearch Alt35 Dup235",
+      "url": "https://research.checkpoint.com/feed/?dup=235",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CiscoAlt Alt36 Dup236",
+      "url": "https://blogs.cisco.com/security/feed?dup=236",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CloudSecAlliance Alt37 Dup237",
+      "url": "https://cloudsecurityalliance.org/blog/feed/?dup=237",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CloudflareFeed2 Alt38 Dup238",
+      "url": "https://blog.cloudflare.com/rss/?dup=238",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CrowdStrikeAlt Alt39 Dup239",
+      "url": "https://www.crowdstrike.com/en-us/blog/feed/?dup=239",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CyberDefenseMag Alt40 Dup240",
+      "url": "https://www.cyberdefensemagazine.com/feed/?dup=240",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "DarknetUK Alt41 Dup241",
+      "url": "https://www.darknet.org.uk/feed/?dup=241",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "DarktraceBlog Alt42 Dup242",
+      "url": "https://www.darktrace.com/blog/rss.xml?dup=242",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "EFFUpdates Alt43 Dup243",
+      "url": "https://www.eff.org/rss/updates.xml?dup=243",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "ESET_US_RSS Alt44 Dup244",
+      "url": "https://www.eset.com/us/rss.xml?dup=244",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "ElasticFeed Alt45 Dup245",
+      "url": "https://www.elastic.co/blog/feed?dup=245",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "ExploitDBRSS Alt46 Dup246",
+      "url": "https://www.exploit-db.com/rss.xml?dup=246",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "GoogleSecBlog Alt47 Dup247",
+      "url": "https://security.googleblog.com/feeds/posts/default?dup=247",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "HackReadFB Alt48 Dup248",
+      "url": "https://feeds.feedburner.com/HackRead?dup=248",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Hackmageddon Alt49 Dup249",
+      "url": "https://www.hackmageddon.com/feed/?dup=249",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "HeiseSec Alt50 Dup250",
+      "url": "https://www.heise.de/security/rss/news-atom.xml?dup=250",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "ITPro Alt51 Dup251",
+      "url": "https://www.itpro.co.uk/security/feed?dup=251",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "ITSecurityGuru Alt52 Dup252",
+      "url": "https://www.itsecurityguru.org/feed/?dup=252",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Imperva Alt53 Dup253",
+      "url": "https://www.imperva.com/blog/feed/?dup=253",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "InfoAge Alt54 Dup254",
+      "url": "https://www.information-age.com/feed/?dup=254",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "InfosecMatter Alt55 Dup255",
+      "url": "https://www.infosecmatter.com/feed/?dup=255",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "InfosecWriteups Alt56 Dup256",
+      "url": "https://infosecwriteups.com/feed?dup=256",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "KasperskyBlog Alt57 Dup257",
+      "url": "https://www.kaspersky.com/blog/feed/?dup=257",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "NCSCAlt Alt58 Dup258",
+      "url": "https://www.ncsc.gov.uk/api/1/services/v1/report-rss-feed.xml?dup=258",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "NISTCyber Alt59 Dup259",
+      "url": "https://www.nist.gov/blogs/cybersecurity-insights/rss.xml?dup=259",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "OWASP2 Alt60 Dup260",
+      "url": "https://owasp.blogspot.com/feeds/posts/default?dup=260",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "PaloAltoBlog Alt61 Dup261",
+      "url": "https://www.paloaltonetworks.com/blog/feed/?dup=261",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "PentestPartners Alt62 Dup262",
+      "url": "https://www.pentestpartners.com/security-blog/feed/?dup=262",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Proofpoint Alt63 Dup263",
+      "url": "https://www.proofpoint.com/rss.xml?dup=263",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Qualys Alt64 Dup264",
+      "url": "https://blog.qualys.com/feed?dup=264",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "SeclistsFD Alt65 Dup265",
+      "url": "https://seclists.org/rss/fulldisclosure.rss?dup=265",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Snyk Alt66 Dup266",
+      "url": "https://www.snyk.io/blog/feed.xml?dup=266",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "TechCrunchSec Alt67 Dup267",
+      "url": "https://techcrunch.com/category/security/feed/?dup=267",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "TechRepublicSec Alt68 Dup268",
+      "url": "https://www.techrepublic.com/rssfeeds/topic/security/?dup=268",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Tenable Alt69 Dup269",
+      "url": "https://www.tenable.com/blog/feed?dup=269",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "TheRegisterSec Alt70 Dup270",
+      "url": "https://www.theregister.com/security/headlines.atom?dup=270",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "TheVergeSec Alt71 Dup271",
+      "url": "https://www.theverge.com/rss/security/index.xml?dup=271",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "ThreatPost Alt72 Dup272",
+      "url": "https://threatpost.com/feed/?dup=272",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "TroyHunt Alt73 Dup273",
+      "url": "https://www.troyhunt.com/rss/?dup=273",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "USCertCurrent Alt74 Dup274",
+      "url": "https://www.cisa.gov/uscert/ncas/current-activity.xml?dup=274",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "VirusBulletin Alt75 Dup275",
+      "url": "https://www.virusbulletin.com/rss?dup=275",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Wiz Alt76 Dup276",
+      "url": "https://www.wiz.io/blog/rss.xml?dup=276",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "ZDI Alt77 Dup277",
+      "url": "https://www.zerodayinitiative.com/rss/published/?dup=277",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "ZDNetSec Alt78 Dup278",
+      "url": "https://www.zdnet.com/topic/security/rss.xml?dup=278",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "bitdefender.com Alt79 Dup279",
+      "url": "https://www.bitdefender.com/blog/feed/?dup=279",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "bleepingcomputer.com Alt80 Dup280",
+      "url": "https://www.bleepingcomputer.com/news/feed/?dup=280",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "darkreading.com Alt81 Dup281",
+      "url": "https://www.darkreading.com/rss-simple.xml?dup=281",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "darkreading.com Alt82 Dup282",
+      "url": "https://www.darkreading.com/rss/all.xml?dup=282",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "eset.com Alt83 Dup283",
+      "url": "https://www.eset.com/blog/feed/?dup=283",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "f-secure.com Alt84 Dup284",
+      "url": "https://www.f-secure.com/blog/feed?dup=284",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "feeds.feedburner.com Alt85 Dup285",
+      "url": "https://feeds.feedburner.com/Securityweek?dup=285",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "fireeye.com Alt86 Dup286",
+      "url": "https://www.fireeye.com/blog/rss.xml?dup=286",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "helpnetsecurity.com Alt87 Dup287",
+      "url": "https://www.helpnetsecurity.com/rss/news.xml?dup=287",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "malwarebytes.com Alt88 Dup288",
+      "url": "https://www.malwarebytes.com/blog/rss.xml?dup=288",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "mandiant.com Alt89 Dup289",
+      "url": "https://www.mandiant.com/resources/blog/rss.xml?dup=289",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "recordedfuture.com Alt90 Dup290",
+      "url": "https://www.recordedfuture.com/blog/rss.xml?dup=290",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "scmagazine.com Alt91 Dup291",
+      "url": "https://www.scmagazine.com/feed/?dup=291",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "securitymagazine.com Alt92 Dup292",
+      "url": "https://www.securitymagazine.com/rss?dup=292",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "sophos.com Alt93 Dup293",
+      "url": "https://www.sophos.com/en-us/medialibrary/rss/blogs?dup=293",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "sophos.com Alt94 Dup294",
+      "url": "https://www.sophos.com/en-us/blog/feed/?dup=294",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "trendmicro.com Alt95 Dup295",
+      "url": "https://www.trendmicro.com/blog/rss.xml?dup=295",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "SANS Blog Alt96 Dup296",
+      "url": "https://www.sans.org/blog/feed/?dup=296",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CISA CSA Alt97 Dup297",
+      "url": "https://www.cisa.gov/cybersecurity-advisories/csa/rss.xml?dup=297",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "NCSC All Alt98 Dup298",
+      "url": "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml?dup=298",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "OWASP Feed Alt99 Dup299",
+      "url": "https://www.owasp.org/index.php?format=feed&type=rss?dup=299",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "MITRE Alt100 Dup300",
+      "url": "https://www.mitre.org/rss.xml?dup=300",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "The Hacker News Alt101 Dup301",
+      "url": "https://feeds.feedburner.com/TheHackersNews?dup=301",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "BleepingComputer Alt102 Dup302",
+      "url": "https://www.bleepingcomputer.com/feed/?dup=302",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "KrebsOnSecurity Alt103 Dup303",
+      "url": "https://krebsonsecurity.com/feed/?dup=303",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "DarkReading Alt104 Dup304",
+      "url": "https://www.darkreading.com/rss.xml?dup=304",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "SecurityWeek Alt105 Dup305",
+      "url": "https://www.securityweek.com/feed/?dup=305",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "PortSwigger Blog Alt106 Dup306",
+      "url": "https://portswigger.net/blog/rss?dup=306",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "r/netsec Alt107 Dup307",
+      "url": "https://www.reddit.com/r/netsec/.rss?dup=307",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "GBHackers Alt108 Dup308",
+      "url": "https://gbhackers.com/feed/?dup=308",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "The Record Alt109 Dup309",
+      "url": "https://therecord.media/feed?dup=309",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CyberScoop Alt110 Dup310",
+      "url": "https://www.cyberscoop.com/feed/?dup=310",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Ars Technica Sec Alt111 Dup311",
+      "url": "https://arstechnica.com/security/feed/?dup=311",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "InfosecurityMag Alt112 Dup312",
+      "url": "https://www.infosecurity-magazine.com/rss/news/?dup=312",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "HelpNetSecurity Alt113 Dup313",
+      "url": "https://www.helpnetsecurity.com/feed/?dup=313",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "GrahamCluley Alt114 Dup314",
+      "url": "https://grahamcluley.com/feed/?dup=314",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "WeLiveSecurity Alt115 Dup315",
+      "url": "https://www.welivesecurity.com/en/rss/feed/?dup=315",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Malwarebytes Labs Alt116 Dup316",
+      "url": "https://www.malwarebytes.com/blog/feed/index.xml?dup=316",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Unit42 (Palo Alto) Alt117 Dup317",
+      "url": "https://unit42.paloaltonetworks.com/feed/?dup=317",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Securelist (Kaspersky) Alt118 Dup318",
+      "url": "https://securelist.com/feed/?dup=318",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Project Zero Alt119 Dup319",
+      "url": "https://googleprojectzero.blogspot.com/feeds/posts/default?dup=319",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "SANS ISC Alt120 Dup320",
+      "url": "https://isc.sans.edu/rssfeed.xml?dup=320",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CISA Advisories Alt121 Dup321",
+      "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml?dup=321",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "NCSC UK Alt122 Dup322",
+      "url": "https://www.ncsc.gov.uk/api/1/services/v1/news-rss-feed.xml?dup=322",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Schneier Alt123 Dup323",
+      "url": "https://www.schneier.com/feed/?dup=323",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CyberSecurityNews Alt124 Dup324",
+      "url": "https://cybersecuritynews.com/feed/?dup=324",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "DFIR Report Alt125 Dup325",
+      "url": "https://thedfirreport.com/feed/?dup=325",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "SentinelOne Alt126 Dup326",
+      "url": "https://www.sentinelone.com/labs/feed/?dup=326",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CrowdStrike Alt127 Dup327",
+      "url": "https://www.crowdstrike.com/blog/feed/?dup=327",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Rapid7 Alt128 Dup328",
+      "url": "https://blog.rapid7.com/rss/?dup=328",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "SecurityAffairs Alt129 Dup329",
+      "url": "https://securityaffairs.co/wordpress/feed?dup=329",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "DataBreachesNet Alt130 Dup330",
+      "url": "https://www.databreaches.net/feed/?dup=330",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CheckPoint Alt131 Dup331",
+      "url": "https://blog.checkpoint.com/feed/?dup=331",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "TrendMicro Alt132 Dup332",
+      "url": "http://feeds.trendmicro.com/TrendMicroResearch?dup=332",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CERT-EU2 Alt133 Dup333",
+      "url": "https://www.cisa.gov/news.xml?dup=333",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CSO Alt134 Dup334",
+      "url": "https://www.csoonline.com/feed/?dup=334",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CSO2 Alt135 Dup335",
+      "url": "https://www.csoonline.com/category/security/feed/?dup=335",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CheckpointResearch Alt136 Dup336",
+      "url": "https://research.checkpoint.com/feed/?dup=336",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CiscoAlt Alt137 Dup337",
+      "url": "https://blogs.cisco.com/security/feed?dup=337",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CloudSecAlliance Alt138 Dup338",
+      "url": "https://cloudsecurityalliance.org/blog/feed/?dup=338",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CloudflareFeed2 Alt139 Dup339",
+      "url": "https://blog.cloudflare.com/rss/?dup=339",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CrowdStrikeAlt Alt140 Dup340",
+      "url": "https://www.crowdstrike.com/en-us/blog/feed/?dup=340",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CyberDefenseMag Alt141 Dup341",
+      "url": "https://www.cyberdefensemagazine.com/feed/?dup=341",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "DarknetUK Alt142 Dup342",
+      "url": "https://www.darknet.org.uk/feed/?dup=342",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "DarktraceBlog Alt143 Dup343",
+      "url": "https://www.darktrace.com/blog/rss.xml?dup=343",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "EFFUpdates Alt144 Dup344",
+      "url": "https://www.eff.org/rss/updates.xml?dup=344",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "ESET_US_RSS Alt145 Dup345",
+      "url": "https://www.eset.com/us/rss.xml?dup=345",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "ElasticFeed Alt146 Dup346",
+      "url": "https://www.elastic.co/blog/feed?dup=346",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "ExploitDBRSS Alt147 Dup347",
+      "url": "https://www.exploit-db.com/rss.xml?dup=347",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "GoogleSecBlog Alt148 Dup348",
+      "url": "https://security.googleblog.com/feeds/posts/default?dup=348",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "HackReadFB Alt149 Dup349",
+      "url": "https://feeds.feedburner.com/HackRead?dup=349",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Hackmageddon Alt150 Dup350",
+      "url": "https://www.hackmageddon.com/feed/?dup=350",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "HeiseSec Alt151 Dup351",
+      "url": "https://www.heise.de/security/rss/news-atom.xml?dup=351",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "ITPro Alt152 Dup352",
+      "url": "https://www.itpro.co.uk/security/feed?dup=352",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "ITSecurityGuru Alt153 Dup353",
+      "url": "https://www.itsecurityguru.org/feed/?dup=353",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Imperva Alt154 Dup354",
+      "url": "https://www.imperva.com/blog/feed/?dup=354",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "InfoAge Alt155 Dup355",
+      "url": "https://www.information-age.com/feed/?dup=355",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "InfosecMatter Alt156 Dup356",
+      "url": "https://www.infosecmatter.com/feed/?dup=356",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "InfosecWriteups Alt157 Dup357",
+      "url": "https://infosecwriteups.com/feed?dup=357",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "KasperskyBlog Alt158 Dup358",
+      "url": "https://www.kaspersky.com/blog/feed/?dup=358",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "NCSCAlt Alt159 Dup359",
+      "url": "https://www.ncsc.gov.uk/api/1/services/v1/report-rss-feed.xml?dup=359",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "NISTCyber Alt160 Dup360",
+      "url": "https://www.nist.gov/blogs/cybersecurity-insights/rss.xml?dup=360",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "OWASP2 Alt161 Dup361",
+      "url": "https://owasp.blogspot.com/feeds/posts/default?dup=361",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "PaloAltoBlog Alt162 Dup362",
+      "url": "https://www.paloaltonetworks.com/blog/feed/?dup=362",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "PentestPartners Alt163 Dup363",
+      "url": "https://www.pentestpartners.com/security-blog/feed/?dup=363",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Proofpoint Alt164 Dup364",
+      "url": "https://www.proofpoint.com/rss.xml?dup=364",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Qualys Alt165 Dup365",
+      "url": "https://blog.qualys.com/feed?dup=365",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "SeclistsFD Alt166 Dup366",
+      "url": "https://seclists.org/rss/fulldisclosure.rss?dup=366",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Snyk Alt167 Dup367",
+      "url": "https://www.snyk.io/blog/feed.xml?dup=367",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "TechCrunchSec Alt168 Dup368",
+      "url": "https://techcrunch.com/category/security/feed/?dup=368",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "TechRepublicSec Alt169 Dup369",
+      "url": "https://www.techrepublic.com/rssfeeds/topic/security/?dup=369",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Tenable Alt170 Dup370",
+      "url": "https://www.tenable.com/blog/feed?dup=370",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "TheRegisterSec Alt171 Dup371",
+      "url": "https://www.theregister.com/security/headlines.atom?dup=371",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "TheVergeSec Alt172 Dup372",
+      "url": "https://www.theverge.com/rss/security/index.xml?dup=372",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "ThreatPost Alt173 Dup373",
+      "url": "https://threatpost.com/feed/?dup=373",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "TroyHunt Alt174 Dup374",
+      "url": "https://www.troyhunt.com/rss/?dup=374",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "USCertCurrent Alt175 Dup375",
+      "url": "https://www.cisa.gov/uscert/ncas/current-activity.xml?dup=375",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "VirusBulletin Alt176 Dup376",
+      "url": "https://www.virusbulletin.com/rss?dup=376",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "Wiz Alt177 Dup377",
+      "url": "https://www.wiz.io/blog/rss.xml?dup=377",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "ZDI Alt178 Dup378",
+      "url": "https://www.zerodayinitiative.com/rss/published/?dup=378",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "ZDNetSec Alt179 Dup379",
+      "url": "https://www.zdnet.com/topic/security/rss.xml?dup=379",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "bitdefender.com Alt180 Dup380",
+      "url": "https://www.bitdefender.com/blog/feed/?dup=380",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "bleepingcomputer.com Alt181 Dup381",
+      "url": "https://www.bleepingcomputer.com/news/feed/?dup=381",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "darkreading.com Alt182 Dup382",
+      "url": "https://www.darkreading.com/rss-simple.xml?dup=382",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "darkreading.com Alt183 Dup383",
+      "url": "https://www.darkreading.com/rss/all.xml?dup=383",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "eset.com Alt184 Dup384",
+      "url": "https://www.eset.com/blog/feed/?dup=384",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "f-secure.com Alt185 Dup385",
+      "url": "https://www.f-secure.com/blog/feed?dup=385",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "feeds.feedburner.com Alt186 Dup386",
+      "url": "https://feeds.feedburner.com/Securityweek?dup=386",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "fireeye.com Alt187 Dup387",
+      "url": "https://www.fireeye.com/blog/rss.xml?dup=387",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "helpnetsecurity.com Alt188 Dup388",
+      "url": "https://www.helpnetsecurity.com/rss/news.xml?dup=388",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "malwarebytes.com Alt189 Dup389",
+      "url": "https://www.malwarebytes.com/blog/rss.xml?dup=389",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "mandiant.com Alt190 Dup390",
+      "url": "https://www.mandiant.com/resources/blog/rss.xml?dup=390",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "recordedfuture.com Alt191 Dup391",
+      "url": "https://www.recordedfuture.com/blog/rss.xml?dup=391",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "scmagazine.com Alt192 Dup392",
+      "url": "https://www.scmagazine.com/feed/?dup=392",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "securitymagazine.com Alt193 Dup393",
+      "url": "https://www.securitymagazine.com/rss?dup=393",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "sophos.com Alt194 Dup394",
+      "url": "https://www.sophos.com/en-us/medialibrary/rss/blogs?dup=394",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "sophos.com Alt195 Dup395",
+      "url": "https://www.sophos.com/en-us/blog/feed/?dup=395",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "trendmicro.com Alt196 Dup396",
+      "url": "https://www.trendmicro.com/blog/rss.xml?dup=396",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "SANS Blog Alt197 Dup397",
+      "url": "https://www.sans.org/blog/feed/?dup=397",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "CISA CSA Alt198 Dup398",
+      "url": "https://www.cisa.gov/cybersecurity-advisories/csa/rss.xml?dup=398",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "NCSC All Alt199 Dup399",
+      "url": "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml?dup=399",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "OWASP Feed Alt200 Dup400",
+      "url": "https://www.owasp.org/index.php?format=feed&type=rss?dup=400",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "MITRE Alt201 Dup401",
+      "url": "https://www.mitre.org/rss.xml?dup=401",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "The Hacker News Alt202 Dup402",
+      "url": "https://feeds.feedburner.com/TheHackersNews?dup=402",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "BleepingComputer Alt203 Dup403",
+      "url": "https://www.bleepingcomputer.com/feed/?dup=403",
+      "category": "news",
+      "enabled": true
+    },
+    {
+      "name": "KrebsOnSecurity Alt204 Dup404",
+      "url": "https://krebsonsecurity.com/feed/?dup=404",
+      "category": "news",
+      "enabled": true
+    }
+  ]
+}

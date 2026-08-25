@@ -26,6 +26,23 @@ except ImportError:
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 CFG = json.load(open(os.path.join(BASE, "config.json")))
+# Professional split: feeds in feeds.json, sensitive settings in config.json
+try:
+    _fd = json.load(open(os.path.join(BASE, "feeds.json")))
+    if isinstance(_fd, dict) and "feeds" in _fd:
+        FEEDS = [f for f in _fd["feeds"] if f.get("enabled", True)]
+    elif isinstance(_fd, list):
+        FEEDS = [f for f in _fd if f.get("enabled", True)]
+    else:
+        FEEDS = []
+except Exception:
+    FEEDS = CFG.get("sources", {}).get("rss", [])
+
+def cfg_get(key, default=None):
+    if "settings" in CFG and key in CFG["settings"]:
+        return CFG["settings"][key]
+    return CFG.get(key, default)
+
 DB = os.path.join(BASE, "data", "intel.db")
 LOG = os.path.join(BASE, "logs", "monitor.log")
 
@@ -180,9 +197,9 @@ def alert(kind, prio, title, body_lines, link):
         mark_seen(con, h, kind, title, prio)
         log.info(f"[BASELINE] {kind}: {title[:70]}")
         return False
-    if prio == "INFO" and CFG["min_priority"] in ("high", "critical"):
+    if prio == "INFO" and cfg_get("min_priority", "high") in ("high", "critical"):
         mark_seen(con, h, kind, title, prio); return False   # skip but remember
-    if prio == "HIGH" and CFG["min_priority"] == "critical":
+    if prio == "HIGH" and cfg_get("min_priority", "high") == "critical":
         mark_seen(con, h, kind, title, prio); return False
     if tg_send(msg):
         mark_seen(con, h, kind, title, prio)
@@ -194,7 +211,7 @@ def alert(kind, prio, title, body_lines, link):
     return False
 
 # ─────────────────────────── Source: RSS feeds ───────────────────────────
-MAX_AGE_DAYS = int(CFG.get("max_age_days", 3))  # Only last 3 days of news
+MAX_AGE_DAYS = int(cfg_get("max_age_days", 3))  # Only last 3 days of news
 def fetch_rss(con):
     """20-thread parallel fetch + date filter (only last 3 days) + seeding."""
     if not feedparser:
@@ -229,7 +246,7 @@ def fetch_rss(con):
                 log.error(f"RSS {src['name']}: {ex}")
                 return (src, None)
         return (src, None)
-    srcs = CFG["sources"]["rss"]
+    srcs = FEEDS
     results = {}
     with ThreadPoolExecutor(max_workers=20) as ex:
         futs = {ex.submit(_fetch_one, s): s for s in srcs}
@@ -320,7 +337,7 @@ def fetch_nvd(con):
         "pubEndDate":   iso(time.time()),
         "resultsPerPage": 50,
     }
-    minscore = CFG.get("cve_min_score", 9.0)
+    minscore = cfg_get("cve_min_score", 9.0)
     try:
         r = requests.get("https://services.nvd.nist.gov/rest/json/cves/2.0",
                          params=params, headers=UA, timeout=40)
@@ -431,7 +448,7 @@ def cycle():
     log.info(f"=== cycle done in {time.time()-t0:.1f}s | total seen items: {n} ===")
     con.close()
     # Heartbeat: har N cycles pe ek "alive" ping jab tak koi alert nahi gaya ho
-    hb = int(CFG.get("heartbeat_cycles", 0) or 0)
+    hb = int(cfg_get("heartbeat_cycles", 0) or 0)
     if hb > 0 and not BOOTSTRAP and SENT_THIS_CYCLE == 0 and CYCLE_COUNT % hb == 0:
         tg_send(f"\U0001F493 IntelMon alive \u2014 cycle #{CYCLE_COUNT} \u00b7 "
                 f"{n} items tracked \u00b7 0 new alerts this hour")
@@ -447,7 +464,7 @@ if __name__ == "__main__":
     if a.test:
         ok = tg_send(f"\u2705 \U0001F916 <b>IntelMon-News online!</b>\nMonitoring: "
                      f"RSS \u00B7 KEV \u00B7 NVD \u00B7 Ransomware.live \u00B7 Exploit-DB\n"
-                     f"min_priority={CFG['min_priority']} interval={CFG.get('interval_sec',600)}s")
+                     f"min_priority={cfg_get('min_priority','high')} interval={cfg_get('interval_sec',180)}s")
         print("TEST OK" if ok else "TEST FAILED"); sys.exit(0)
 
     if a.loop:
