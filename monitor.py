@@ -216,11 +216,16 @@ def fetch_rss(con):
     """20-thread parallel fetch + date filter (only last 3 days) + seeding."""
     if not feedparser:
         return
+    # Use session with larger pool to avoid connection pool exhaustion (200 feeds)
+    session = requests.Session()
+    adapter = requests.adapters.HTTPAdapter(pool_connections=20, pool_maxsize=20, max_retries=0)
+    session.mount('http://', adapter)
+    session.mount('https://', adapter)
     def _fetch_one(src):
         headers = UA
         for attempt in range(2):
             try:
-                r = requests.get(src["url"], headers=headers, timeout=20)
+                r = session.get(src["url"], headers=headers, timeout=30)
                 if r.status_code == 200 and r.content:
                     return (src, r.content)
                 # Transient errors: retry once, then silently skip to avoid log spam
