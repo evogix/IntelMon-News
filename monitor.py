@@ -136,7 +136,7 @@ def tg_send(text):
     return ok
 
 def is_similar_recent(con, title):
-    # 12h me same story alag title se aaye to bhi duplicate samjho (Jaccard >0.6)
+    # Duplicate if same story appears with different title within 12h (Jaccard >0.6)
     try:
         norm = set(re.sub(r'\W+', ' ', title.lower()).split())
         if len(norm) < 4:
@@ -164,11 +164,11 @@ def alert(kind, prio, title, body_lines, link):
         f'⏰ <code>{now_str()}</code>'
     )
     con = db()
-    # dedup by normalized title (link alag ho to bhi same story = duplicate)
+    # Dedup by normalized title (different link but same story = duplicate)
     norm_title = re.sub(r'\W+', ' ', title.lower()).strip()[:80]
     h = hashlib.sha256((kind + norm_title).encode()).hexdigest()
     if is_seen(con, h) or is_similar_recent(con, title):
-        # mark seen bhi karo taaki dobara check na ho
+        # Also mark as seen to avoid re-checking
         if not is_seen(con, h):
             mark_seen(con, h, kind, title, prio)
         return False
@@ -190,7 +190,7 @@ def alert(kind, prio, title, body_lines, link):
     return False
 
 # ─────────────────────────── Source: RSS feeds ───────────────────────────
-MAX_AGE_DAYS = int(CFG.get("max_age_days", 3))  # sirf latest 3 din ka news
+MAX_AGE_DAYS = int(CFG.get("max_age_days", 3))  # Only last 3 days of news
 def fetch_rss(con):
     """20-thread parallel fetch + date filter (only last 3 days) + seeding."""
     if not feedparser:
@@ -212,7 +212,7 @@ def fetch_rss(con):
         for fut in as_completed(futs):
             src, content = fut.result()
             results[src["url"]] = (src, content)
-    for src in srcs:  # config order preserve karo
+    for src in srcs:  # Preserve config order
         _, raw = results.get(src["url"], (src, None))
         if not raw:
             continue
@@ -329,8 +329,8 @@ def fetch_nvd(con):
 
 # ───────────── Source: RansomWatch (fresh victims) ────────────────────────
 def fetch_ransomware(con):
-    """ransomwatch GitHub mirror — tracks all major leak-site groups.
-    Bootstrap-safe: pehli baar sirf baseline set hota hai, alerts nahi jaate."""
+    """RansomWatch GitHub mirror — tracks all major leak-site groups.
+    Bootstrap-safe: first run only sets baseline, no alerts."""
     try:
         r = requests.get("https://raw.githubusercontent.com/joshhighet/ransomwatch/"
                          "main/posts.json", headers=UA, timeout=60)
@@ -394,7 +394,7 @@ def cycle():
     con = db()
     BOOTSTRAP = not get_meta(con, "bootstrapped", 0)
     if BOOTSTRAP:
-        log.info("BOOTSTRAP MODE: pehli cycle — sirf baseline, koi alert nahi")
+        log.info("BOOTSTRAP MODE: first cycle — baseline only, no alerts")
     t0 = time.time()
     log.info("=== intel cycle start ===")
     if CFG["sources"].get("enable_ransomware"): fetch_ransomware(con)
@@ -410,7 +410,7 @@ def cycle():
     hb = int(CFG.get("heartbeat_cycles", 0) or 0)
     if hb > 0 and not BOOTSTRAP and SENT_THIS_CYCLE == 0 and CYCLE_COUNT % hb == 0:
         tg_send(f"\U0001F493 IntelMon alive \u2014 cycle #{CYCLE_COUNT} \u00b7 "
-                f"{n} items tracked \u00b7 is ghante mein 0 new alerts")
+                f"{n} items tracked \u00b7 0 new alerts this hour")
         log.info("[HEARTBEAT] sent")
 
 if __name__ == "__main__":
