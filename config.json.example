@@ -5,7 +5,7 @@
   },
   "settings": {
     "min_priority": "high",
-    "interval_sec": 180,
+    "interval_sec": 300,
     "heartbeat_cycles": 0,
     "max_age_days": 3,
     "cve_min_score": 9.0
