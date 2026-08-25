@@ -1,0 +1,28 @@
+# secrets
+config.json
+.env
+*.token
+
+# runtime data
+data/
+logs/
+*.log
+*.db
+*.sqlite
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+
+# termux / temp
+cands*.txt
+final_rss.json
+rw*.json
+*.html
+
+# OS
+.DS_Store
+Thumbs.db
