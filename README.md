@@ -2,6 +2,8 @@
 
 Real-time cybersecurity intelligence aggregator. Every new article, CVE, or victim is delivered to Telegram with source link and timestamp.
 
+**Cross-platform:** Linux · macOS · Windows (WSL) · Termux (Android) · Docker · VPS
+
 ## Monitored Sources
 
 | Source | Data | Priority |
@@ -18,11 +20,12 @@ Real-time cybersecurity intelligence aggregator. Every new article, CVE, or vict
 
 **Filters:** Only articles from the last 3 days (`max_age_days: 3`). Older items are skipped. Short keywords (`rce`, `poc`) use word boundaries to avoid false positives (e.g., `percent`).
 
-## Setup (5 minutes)
+## Setup (5 minutes) — Any OS
 
 ```bash
+git clone https://github.com/evogix/intel-monitor.git
 cd intel-monitor
-bash setup.sh                    # installs: requests feedparser
+bash setup.sh                    # or: pip install -r requirements.txt
 
 # 1. Create bot: @BotFather on Telegram → /newbot → copy token
 # 2. Edit config.json → telegram.bot_token
@@ -37,6 +40,8 @@ python3 monitor.py --loop 180    # continuous (every 3 min)
 ```
 
 Copy `config.json.example` to `config.json` and fill your credentials. Never commit `config.json` with real tokens.
+
+Works on **Python 3.10+** — `requests` + `feedparser` only.
 
 ## Alert Format
 
@@ -77,41 +82,67 @@ Timestamps are in IST (Asia/Kolkata, 12-hour with AM/PM).
 - `heartbeat_cycles`: `0` (disabled; set to N to send heartbeat every N cycles)
 - `keywords`: customize critical/high/group lists
 
-## Running
+## Running — Cross-Platform
 
-**Termux (background):**
+**Linux / macOS / WSL:**
 ```bash
-termux-wake-lock
 nohup python3 monitor.py --loop 180 > logs/nohup.log 2>&1 &
 ```
 
-**With Boot/Widget (no need to open Termux):**
-- Boot: `~/.termux/boot/intelmon-boot.sh` auto-starts on device boot
-- Widget: add `~/.shortcuts/IntelMon-Status.sh` via home screen → Widgets → Termux
+**Windows (PowerShell):**
+```powershell
+python monitor.py --loop 180
+# or for background:
+Start-Process python -ArgumentList "monitor.py --loop 180" -WindowStyle Hidden
+```
 
-**VPS (24/7):**
+**Docker (any OS):**
 ```bash
-# cron every 3 min
+docker-compose up -d
+# or
+docker build -t intel-monitor . && docker run -d --restart unless-stopped -v $PWD/data:/app/data -v $PWD/logs:/app/logs -v $PWD/config.json:/app/config.json:ro intel-monitor
+```
+
+**Systemd (VPS — Linux):**
+```bash
+sudo cp intel-monitor.service /etc/systemd/system/
+sudo systemctl enable --now intel-monitor
+sudo journalctl -u intel-monitor -f
+```
+
+**Cron (VPS — alternative):**
+```bash
 */3 * * * * cd /opt/intel-monitor && python3 monitor.py --once >> logs/cron.log 2>&1
 ```
-Or systemd with `Restart=always` and `--loop 180`.
+
+**Termux (Android):**
+```bash
+termux-wake-lock
+nohup python3 monitor.py --loop 180 > logs/nohup.log 2>&1 &
+# Boot auto-start: ~/.termux/boot/intelmon-boot.sh
+# Widget: ~/.shortcuts/IntelMon-Status.sh → Home → Widgets → Termux
+```
 
 ## Project Structure
 
 ```
 intel-monitor/
-├── monitor.py           # main engine
-├── config.json          # sources + keywords + creds (gitignored)
-├── config.json.example  # template
-├── setup.sh             # installer
-├── data/intel.db        # dedup store (SQLite)
-└── logs/                # monitor.log, nohup.log
+├── monitor.py              # main engine (cross-platform)
+├── config.json             # sources + keywords + creds (gitignored)
+├── config.json.example     # template
+├── requirements.txt        # pip deps
+├── setup.sh                # cross-platform installer
+├── Dockerfile              # Docker build
+├── docker-compose.yml      # Docker Compose
+├── intel-monitor.service   # systemd service
+├── data/intel.db           # dedup store (SQLite)
+└── logs/                   # monitor.log, nohup.log
 ```
 
 ## Requirements
 
 - Python 3.10+
-- `pip install requests feedparser`
+- `pip install -r requirements.txt` (requests, feedparser)
 
 ## License
 
